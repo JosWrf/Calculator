@@ -36,6 +36,8 @@ export class Evaluator {
   visitValue(value) {
     const start = value.value.start_idx;
     const end = value.value.width + start;
-    return parseInt(this.text.slice(start, end));
+    return value.type == TokenType.INT
+      ? parseInt(this.text.slice(start, end))
+      : parseFloat(this.text.slice(start, end));
   }
 }
