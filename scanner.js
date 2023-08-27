@@ -70,7 +70,7 @@ export class Scanner {
     if (this.isNumeric(currChar)) {
       return this.handleOperands();
     } else {
-      throw `Invalid Character encountered ${currChar} at position ${this.currPos}.`;
+      throw `Invalid Character encountered ${currChar} at position ${this.currPos} of the input.`;
     }
   }
 
