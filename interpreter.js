@@ -8,7 +8,7 @@ export class Interpreter {
 
   interpret(text) {
     if (text.length === 0)
-        return;
+        return "";
     try {
       const tokens = this.scanner.scanInput(text);
       const ast = this.parser.parse(tokens, text);
@@ -17,7 +17,7 @@ export class Interpreter {
       return value;
     } catch (exception) {
         alert(exception);
-        return "";
+        return null;
     }
   }
 }
