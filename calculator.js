@@ -8,6 +8,9 @@ buttonContainer.addEventListener("click", function(event){
     const trget = event.target;
     const input = trget.getAttribute("class");
     switch(input){
+        case "remove":
+            display.value = display.value.slice(0, -1);
+            break;
         case "clear":
             display.value = "";
             break;
